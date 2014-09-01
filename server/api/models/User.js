@@ -6,10 +6,13 @@
 */
 
 module.exports = {
-  connection: 'flapp2',
   attributes: {
 
-      uid : { type: 'string', unique: true },
+      userId : { type: 'string', unique: true },
+
+      accessToken: {type: 'string'},
+
+      secretToken: {type: 'string'},
 
       name : { type: 'string' },
 

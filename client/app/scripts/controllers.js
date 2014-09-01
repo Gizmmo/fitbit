@@ -12,16 +12,16 @@ angular.module('Fitbit.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('AuthenticationController', function($scope, $stateParams, localStorageService, $state) {
-	// if (localStorageService.get('fitbit-token') && isTokenInDate(localStorageService)) {
-	// 		$state.transitionTo('home');
-	// 		$scope.Authenticated = true;
-	// 		console.log("User Logged and Auth");
+.controller('AuthenticationController', function($scope, $rootScope, $stateParams, localStorageService, $state) {
+	if (localStorageService.get('fitbit-token') && isTokenInDate(localStorageService)) {
+			$state.transitionTo('home');
+			$rootScope.Authenticated = true;
+			console.log("User Logged and Auth");
 
-	// } else {
-		$scope.needsAuthentication = true;
+	} else {
+		$rootScope.needsAuthentication = true;
 		console.log("User Not Auth")
-	// }
+	}
 	$scope.logout = function () {
 		LocalStorageService.clearAll();
 		location.href = location.path

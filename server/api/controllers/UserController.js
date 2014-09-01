@@ -6,45 +6,11 @@
  */
 
 module.exports = {
-	
 
+  getProfile: function (req, res) {
+    var userId = "";
+    console.log("UserID:");
 
-  /**
-   * `UserController.index()`
-   */
-  index: function (req, res) {
-    return res.json({
-    });
-  },
-
-
-  /**
-   * `UserController.show()`
-   */
-  show: function (req, res) {
-    return res.json({
-      
-    });
-  },
-
-
-  /**
-   * `UserController.edit()`
-   */
-  edit: function (req, res) {
-    return res.json({
-      todo: 'edit() is not implemented yet!'
-    });
-  },
-
-
-  /**
-   * `UserController.delete()`
-   */
-  delete: function (req, res) {
-    return res.json({
-      todo: 'delete() is not implemented yet!'
-    });
   }
 };
 

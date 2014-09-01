@@ -37,6 +37,12 @@ angular.module('Fitbit', ['ionic', 'config', 'Fitbit.controllers', 'Fitbit.servi
       templateUrl: 'templates/tabs.html'
     })
 
+    .state('profile', {
+      url: '/profile?oauth_token&userId',
+      templateUrl: 'views/profile.html',
+      controller: "ProfileCtrl"
+    })
+
     // Each tab has its own nav history stack:
 
     .state('tab.dash', {
