@@ -25,11 +25,7 @@ module.exports = {
 					var userToken = req.query['oauth_token'];
 					var month = 43829;
 					var server_token = jwt.sign({id: userId}, "TravisAwesome", { expiresInMinutes: month});
-					// res.redirect('http://127.0.0.1:9000/#/profile' + '?oauth_token=' + server_token+ "&userId=" + userId)
-                	res.json({
-                		oauth_token: server_token,
-                		userId: userId
-                	})
+					res.redirect('http://127.0.0.1:9000/#/profile' + '?oauth_token=' + server_token+ "&userId=" + userId)
                 }
 	      })(req, res);
 	},
